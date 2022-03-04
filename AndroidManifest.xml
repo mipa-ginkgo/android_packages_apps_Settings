@@ -4642,5 +4642,20 @@
             android:launchMode="singleTask" />
 
         <!-- This is the longest AndroidManifest.xml ever. -->
+        
+        <!-- ArrowLab additions -->
+        <activity android:name=".Settings$ArrowArrowLabSettingsActivity"
+                  android:label="@string/customize_dashboard_title"
+                  android:icon="@drawable/ic_homepage_afterlab"
+                  android:exported="true"
+                  android:parentActivityName="com.android.settings">
+            <intent-filter>
+                <action android:name="com.android.settings.action.SETTINGS"/>
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.arrow.arrowlab.CustomizeDashboard"/>
+            <meta-data android:name="com.android.settings.summary"
+                       android:resource="@string/build_tweaks_summary_title"/>
+        </activity>
     </application>
 </manifest>

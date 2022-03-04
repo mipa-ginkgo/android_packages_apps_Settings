@@ -50,6 +50,16 @@
         settings:highlightableMenuKey="@string/menu_key_connected_devices"
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
 
+        
+    <Preference
+        android:key="top_level_arrowlab"
+        android:title="@string/customize_dashboard_title"
+        android:summary="@string/build_tweaks_summary_title"
+        android:icon="@drawable/ic_settings_arrowlab"
+        android:order="-130"
+        android:fragment="com.arrow.arrowlab.CustomizeDashboard"
+        settings:controller="com.arrow.arrowlab.TopLevelExtensionsEntryPreferenceController" />
+
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.applications.AppDashboardFragment"
         android:icon="@drawable/ic_apps"

@@ -53,7 +53,19 @@ android_library {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: ["src/**/*.java", "src/**/*.kt"],
+    srcs: ["src/**/*.java", 
+	   "src/**/*.kt",
+	   "AfterLab/src/**/*.java",
+    ],
+
+    resource_dirs: [
+        "res",
+        "AfterLab/res",
+    ],
+    
+    aaptflags: ["--extra-packages com.arrow.arrowlab",
+                "--extra-packages github.com.st235.lib_expandablebottombar",
+    ],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
@@ -96,6 +108,11 @@ android_library {
         "kotlin-stdlib",
         "kotlinx_coroutines_android",
         "kotlinx_coroutines",
+        "expandable-bottombar",
+        "androidx.navigation_navigation-common-ktx",
+        "androidx.navigation_navigation-fragment-ktx",
+        "androidx.navigation_navigation-runtime-ktx",
+        "androidx.navigation_navigation-ui-ktx",
     ],
 
     libs: [
@@ -150,4 +167,10 @@ filegroup {
 filegroup {
     name: "Settings_manifest",
     srcs: ["AndroidManifest.xml"],
+}
+
+android_library_import {
+    name: "expandable-bottombar",
+    aars: ["libs/lib-expandablebottombar-release.aar"],
+    sdk_version: "current",
 }
