@@ -132,6 +132,10 @@ public class ApnEditorTest {
         doReturn(mContext.getTheme()).when(mActivity).getTheme();
         doReturn(mContext.getContentResolver()).when(mActivity).getContentResolver();
 
+        doReturn(mUserManager).when(mContext).getSystemService(UserManager.class);
+        doReturn(true).when(mUserManager).isAdminUser();
+        doReturn(false).when(mUserManager)
+                .hasUserRestriction(UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS);
         doReturn(mCarrierConfigManager).when(mContext)
                 .getSystemService(Context.CARRIER_CONFIG_SERVICE);
         doReturn(mBundle).when(mCarrierConfigManager).getConfigForSubId(anyInt());

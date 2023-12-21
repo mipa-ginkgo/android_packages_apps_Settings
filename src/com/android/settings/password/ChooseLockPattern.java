@@ -933,6 +933,7 @@ public class ChooseLockPattern extends SettingsActivity {
                 success = false;
             }
             if (success) {
+                mUtils.setLockPatternSize(mPatternSize, userId);
                 unifyProfileCredentialIfRequested();
             }
             Intent result = null;
