@@ -268,4 +268,7 @@
     <!-- Game Space -->
     <string name="game_space_title">Game Space</string>
     <string name="game_space_summary">Enhance your gaming experience</string>
+
+    <!-- ArrowOS Maitainer -->
+    <string name="arrow_maintainer_title">Device maintainer</string>
 </resources>
