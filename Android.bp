@@ -55,12 +55,12 @@ android_library {
 
     srcs: ["src/**/*.java", 
 	   "src/**/*.kt",
-	   "AfterLab/src/**/*.java",
+	   "ArrowLab/src/**/*.java",
     ],
 
     resource_dirs: [
         "res",
-        "AfterLab/res",
+        "ArrowLab/res",
     ],
     
     aaptflags: ["--extra-packages com.arrow.arrowlab",
