@@ -4646,7 +4646,7 @@
         <!-- ArrowLab additions -->
         <activity android:name=".Settings$ArrowArrowLabSettingsActivity"
                   android:label="@string/customize_dashboard_title"
-                  android:icon="@drawable/ic_homepage_afterlab"
+                  android:icon="@drawable/ic_homepage_arrowlab"
                   android:exported="true"
                   android:parentActivityName="com.android.settings">
             <intent-filter>
