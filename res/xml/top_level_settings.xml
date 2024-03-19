@@ -51,7 +51,7 @@
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
 
         
-    <Preference
+    <com.android.settings.widget.HomepagePreference
         android:key="top_level_arrowlab"
         android:title="@string/customize_dashboard_title"
         android:summary="@string/build_tweaks_summary_title"
