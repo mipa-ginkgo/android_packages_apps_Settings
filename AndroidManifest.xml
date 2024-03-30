@@ -4646,7 +4646,7 @@
         <!-- This is the longest AndroidManifest.xml ever. -->
         
         <!-- ArrowLab additions -->
-        <activity android:name=".Settings$ArrowArrowLabSettingsActivity"
+        <activity android:name=".Settings$ArrowLabSettingsActivity"
                   android:label="@string/customize_dashboard_title"
                   android:icon="@drawable/ic_homepage_arrowlab"
                   android:exported="true"
