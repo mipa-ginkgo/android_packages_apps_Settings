@@ -181,7 +181,7 @@ import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSetting
 import com.android.settings.wifi.tether.WifiTetherClientManager;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
-import com.arrow.arrowlab.CustomizeDashboard;
+import com.arrow.arrowlab.ArrowDashboard;
 
 public class SettingsGateway {
 
@@ -351,7 +351,7 @@ public class SettingsGateway {
             AppLocaleDetails.class.getName(),
             TurnScreenOnSettings.class.getName(),
             WifiTetherClientManager.class.getName(),
-            CustomizeDashboard.class.getName(),
+            ArrowDashboard.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
