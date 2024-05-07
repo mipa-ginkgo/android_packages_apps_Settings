@@ -53,11 +53,11 @@
         
     <com.android.settings.widget.HomepagePreference
         android:key="top_level_arrowlab"
-        android:title="@string/customize_dashboard_title"
+        android:title="@string/arrow_dashboard_title"
         android:summary="@string/build_tweaks_summary_title"
         android:icon="@drawable/ic_settings_arrowlab"
         android:order="-130"
-        android:fragment="com.arrow.arrowlab.CustomizeDashboard"
+        android:fragment="com.arrow.arrowlab.ArrowDashboard"
         settings:controller="com.arrow.arrowlab.TopLevelExtensionsEntryPreferenceController" />
 
     <com.android.settings.widget.HomepagePreference
