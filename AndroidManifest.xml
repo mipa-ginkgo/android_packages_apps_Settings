@@ -4647,7 +4647,7 @@
         
         <!-- ArrowLab additions -->
         <activity android:name=".Settings$ArrowLabSettingsActivity"
-                  android:label="@string/customize_dashboard_title"
+                  android:label="@string/arrow_dashboard_title"
                   android:icon="@drawable/ic_homepage_arrowlab"
                   android:exported="true"
                   android:parentActivityName="com.android.settings">
@@ -4655,7 +4655,7 @@
                 <action android:name="com.android.settings.action.SETTINGS"/>
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                       android:value="com.arrow.arrowlab.CustomizeDashboard"/>
+                       android:value="com.arrow.arrowlab.ArrowDashboard"/>
             <meta-data android:name="com.android.settings.summary"
                        android:resource="@string/build_tweaks_summary_title"/>
         </activity>
