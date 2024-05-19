@@ -59,8 +59,7 @@
         android:key="basic_info_category"
         android:selectable="false"
         android:title="@string/net_info">
-
-        <!-- Phone number -->
+     <!--
         <Preference
             android:key="phone_number"
             android:title="@string/status_number"
@@ -68,7 +67,7 @@
             android:selectable="false"
             settings:controller="com.android.settings.deviceinfo.PhoneNumberPreferenceController"
             settings:enableCopying="true"/>
-
+        -->
         <!-- SIM status -->
         <Preference
             android:key="sim_status"
