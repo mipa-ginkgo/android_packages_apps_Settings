@@ -215,7 +215,9 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             final Preference preference = screen.getPreference(i);
 
  	    String key = preference.getKey();
-
+            if (key.equals("top_level_arrowlab")){
+	        preference.setLayoutResource(R.layout.top_level_preference_single);
+	    }
 	    if (key.equals("top_level_network")){
 	        preference.setLayoutResource(R.layout.top_level_preference_top);
 	    }
