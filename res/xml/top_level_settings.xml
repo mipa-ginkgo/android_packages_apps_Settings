@@ -25,7 +25,7 @@
         android:title="@string/arrow_dashboard_title"
         android:summary="@string/build_tweaks_summary_title"
         android:icon="@drawable/ic_settings_arrowlab"
-        android:order="-130"
+        android:order="-160"
         android:fragment="com.arrow.arrowlab.ArrowDashboard"
         settings:controller="com.arrow.arrowlab.TopLevelExtensionsEntryPreferenceController" />
   
