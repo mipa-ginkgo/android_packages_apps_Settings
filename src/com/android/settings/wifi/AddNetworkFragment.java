@@ -16,16 +16,11 @@
 
 package com.android.settings.wifi;
 
-import static android.os.UserManager.DISALLOW_ADD_WIFI_CONFIG;
-
 import android.app.Activity;
 import android.app.settings.SettingsEnums;
-import android.content.Context;
 import android.content.Intent;
 import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
-import android.os.UserManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,7 +41,6 @@ import com.android.settings.wifi.dpp.WifiDppUtils;
  */
 public class AddNetworkFragment extends InstrumentedFragment implements WifiConfigUiBase2,
         View.OnClickListener {
-    private static final String TAG = "AddNetworkFragment";
 
     public static final String WIFI_CONFIG_KEY = "wifi_config_key";
     @VisibleForTesting
@@ -64,10 +58,6 @@ public class AddNetworkFragment extends InstrumentedFragment implements WifiConf
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (!isAddWifiConfigAllowed(getContext())) {
-            getActivity().finish();
-            return;
-        }
     }
 
     @Override
@@ -218,15 +208,5 @@ public class AddNetworkFragment extends InstrumentedFragment implements WifiConf
         final Activity activity = getActivity();
         activity.setResult(Activity.RESULT_CANCELED);
         activity.finish();
-    }
-
-    @VisibleForTesting
-    static boolean isAddWifiConfigAllowed(Context context) {
-        UserManager userManager = context.getSystemService(UserManager.class);
-        if (userManager != null && userManager.hasUserRestriction(DISALLOW_ADD_WIFI_CONFIG)) {
-            Log.e(TAG, "The user is not allowed to add Wi-Fi configuration.");
-            return false;
-        }
-        return true;
     }
 }
